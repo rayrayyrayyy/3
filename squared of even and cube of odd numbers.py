@@ -17,6 +17,8 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
 
 # read integers.txt by line
     for line input_file:
+        user_num = int(line)
+    
         
 
 # if extracted number is even
