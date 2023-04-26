@@ -4,6 +4,7 @@
 # The second file will be named triple.txt containing the cube of all odd numbers found in the integers.txt.
 
 # open files integers.txt, double.txt, and triple.txt
+with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_squared, open("triple.txt", 'w') as odd_cube:
 
 # ask user for numbers
 # check if inputs are integers
