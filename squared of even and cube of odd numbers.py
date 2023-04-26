@@ -14,16 +14,18 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
         # put the numbers to integers.txt
         input_file.write((user_numbers) + '\n')
         i += 1
+        break
 
     # read integers.txt by line
     for line input_file:
         user_num = int(line)
-    
-        # if extracted number is even
+            
+                # if extracted number is even
         if user_num % 2 == 0:
-        # extracted number will be squared
-        squared_number = user_num ** 2
-        # write squared number to double.txt
+                # extracted number will be squared
+            squared_number = user_num ** 2
+                # write squared number to double.txt
+            even_squared.write(str(squared_number) + '\n')
 
 # else if the extracted number is odd
     # extracted number will be cubed
