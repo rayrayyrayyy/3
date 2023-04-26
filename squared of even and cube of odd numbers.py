@@ -31,5 +31,6 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
             # extracted number will be cubed
             cubed_number = user_num ** 3
             # write cubed number to triple.txt
+            odd_cube.write(str(cubed_number) + '\n')
 
 # end of program
