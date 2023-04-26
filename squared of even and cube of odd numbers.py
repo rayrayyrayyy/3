@@ -26,8 +26,9 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
             # write squared number to double.txt
             even_squared.write(str(squared_number) + '\n')
 
-# else if the extracted number is odd
-    # extracted number will be cubed
-    # write cubed number to triple.txt
+        # else if the extracted number is odd
+        if user_num % 2 == 1:
+            # extracted number will be cubed
+            # write cubed number to triple.txt
 
 # end of program
