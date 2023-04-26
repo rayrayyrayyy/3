@@ -29,6 +29,7 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
         # else if the extracted number is odd
         if user_num % 2 == 1:
             # extracted number will be cubed
+            cubed_number = user_num ** 3
             # write cubed number to triple.txt
 
 # end of program
