@@ -8,18 +8,16 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
 
 # create loop
     i = 0
-    while (i <= 20):
+    while (i < 20):
 # ask user for numbers
         user_numbers = input("Please write a number: ")
-# check if inputs are integers
-
-# parse the inputs
-
 # put the numbers to integers.txt
-        input_file.write(str(user_numbers) + '\n')
+        input_file.write((user_numbers) + '\n')
         i += 1
 
 # read integers.txt by line
+    for line input_file:
+        
 
 # if extracted number is even
     # extracted number will be squared
