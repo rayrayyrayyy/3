@@ -22,6 +22,7 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
         # if extracted number is even
         if user_num % 2 == 0:
         # extracted number will be squared
+        squared_number = user_num ** 2
         # write squared number to double.txt
 
 # else if the extracted number is odd
