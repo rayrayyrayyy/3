@@ -6,24 +6,23 @@
 # open files integers.txt, double.txt, and triple.txt
 with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_squared, open("triple.txt", 'w') as odd_cube:
 
-# create loop
+    # create loop
     i = 0
     while (i < 20):
-# ask user for numbers
+        # ask user for numbers
         user_numbers = input("Please write a number: ")
-# put the numbers to integers.txt
+        # put the numbers to integers.txt
         input_file.write((user_numbers) + '\n')
         i += 1
 
-# read integers.txt by line
+    # read integers.txt by line
     for line input_file:
         user_num = int(line)
     
-        
-
-# if extracted number is even
-    # extracted number will be squared
-    # write squared number to double.txt
+        # if extracted number is even
+        if user_num % 2 == 0:
+        # extracted number will be squared
+        # write squared number to double.txt
 
 # else if the extracted number is odd
     # extracted number will be cubed
