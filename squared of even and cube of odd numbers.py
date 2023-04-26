@@ -4,7 +4,7 @@
 # The second file will be named triple.txt containing the cube of all odd numbers found in the integers.txt.
 
 # open files integers.txt, double.txt, and triple.txt
-with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_squared, open("triple.txt", 'w') as odd_cube:
+with open("integers.txt", 'w') as input_file:
 
     # create loop
     i = 0
@@ -15,8 +15,9 @@ with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_sq
         input_file.write((user_numbers) + '\n')
         i += 1
 
+with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even_squared, open("triple.txt", 'w') as odd_cube:
     # read integers.txt by line
-    for line in input_file:
+    for line in integers_file:
         user_num = int(line)
             
         # if extracted number is even
