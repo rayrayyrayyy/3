@@ -6,12 +6,18 @@
 # open files integers.txt, double.txt, and triple.txt
 with open("integers.txt", 'w') as input_file, open("double.txt", 'w') as even_squared, open("triple.txt", 'w') as odd_cube:
 
+# create loop
+    i = 0
+    while (i <= 20):
 # ask user for numbers
+        user_numbers = input("Please write a number: ")
 # check if inputs are integers
 
 # parse the inputs
 
 # put the numbers to integers.txt
+        input_file.write(str(user_numbers) + '\n')
+        i += 1
 
 # read integers.txt by line
 
