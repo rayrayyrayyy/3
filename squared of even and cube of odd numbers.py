@@ -59,6 +59,8 @@ with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even
 with open("integers.txt") as integers_file1, open("double.txt") as even_squared1, open("triple.txt") as odd_cube1:
     # read integers.txt by line
     user_num1 = [int(line) for line in integers_file1.read().split()]
+    # show user the numbers they entered
+    print(Fore.LIGHTBLUE_EX + "\033[1m\n\n\tCHOSEN NUMBERS: \033[0m" + Fore.CYAN, user_num1)
 
 
 # outro
