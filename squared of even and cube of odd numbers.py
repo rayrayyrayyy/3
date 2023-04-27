@@ -67,7 +67,8 @@ with open("integers.txt") as integers_file1, open("double.txt") as even_squared1
     # show user the numbers they entered
     print(Fore.LIGHTBLUE_EX + "\n\n\tSQUARED EVEN NUMBERS: " + Style.RESET_ALL, num_squared)
 
-
+    # read triple.txt by line
+    num_cubed = [int(line) for line in odd_cube1.read().split()]
 
 
 # outro
