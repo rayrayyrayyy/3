@@ -60,10 +60,12 @@ with open("integers.txt") as integers_file1, open("double.txt") as even_squared1
     # read integers.txt by line
     user_num1 = [int(line) for line in integers_file1.read().split()]
     # show user the numbers they entered
-    print(Fore.LIGHTBLUE_EX + "\033[1m\n\n\tCHOSEN NUMBERS: \033[0m" + Fore.CYAN, user_num1)
+    print(Fore.LIGHTBLUE_EX + "\n\n\tCHOSEN NUMBERS: " + Style.RESET_ALL, user_num1)
 
     # read double.txt by line
     num_squared = [int(line) for line in even_squared1.read().split()]
+    # show user the numbers they entered
+    print(Fore.LIGHTBLUE_EX + "\n\n\tSQUARED EVEN NUMBERS: " + Style.RESET_ALL, num_squared)
 
 
 
