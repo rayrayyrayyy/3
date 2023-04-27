@@ -55,6 +55,8 @@ with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even
             # write cubed number to triple.txt
             odd_cube.write(str(cubed_number) + '\n')
 
+print('\n' + Fore.BLUE + "-"*150)
+
 # open files integers.txt(read), double.txt(write), and triple.txt(write)
 with open("integers.txt") as integers_file1, open("double.txt") as even_squared1, open("triple.txt") as odd_cube1:
     # read integers.txt by line
