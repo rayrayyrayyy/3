@@ -3,13 +3,16 @@
 # The first output file will be named double.txt containing the square of all even integers found in integers.txt.
 # The second file will be named triple.txt containing the cube of all odd numbers found in the integers.txt.
 
+# import modules for design
 import pyfiglet
 from termcolor import colored, cprint
+import time
+from colorama import Fore, Back, Style
 
 print_grey = lambda x: cprint(x, 'grey')
 print_yellow = lambda x: cprint(x, 'yellow')
 
-# open files integers.txt, double.txt, and triple.txt
+# open file integers.txt(write)
 with open("integers.txt", 'w') as input_file:
 
     # create loop
@@ -21,9 +24,7 @@ with open("integers.txt", 'w') as input_file:
         input_file.write((user_numbers) + '\n')
         i += 1
 
-    done = pyfiglet.figlet_format("Thank you!", font = 'doom', width = 100, justify = 'center')
-    print_yellow(done)
-
+# open files integers.txt(read), double.txt(write), and triple.txt(write)
 with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even_squared, open("triple.txt", 'w') as odd_cube:
     # read integers.txt by line
     for line in integers_file:
@@ -43,8 +44,10 @@ with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even
             # write cubed number to triple.txt
             odd_cube.write(str(cubed_number) + '\n')
 
+# outro
+done = pyfiglet.figlet_format("Thank you!", font = 'doom', width = 100, justify = 'center')
+print_yellow(done)
 note = "See text files for results"
-note_centered = note.center(100)
-print_grey('\033[1m' + note)
+print_grey(Fore.YELLOW + Style.BRIGHT + '-'*38 + note + '-'*38 + '\n') 
 
-# end of program2
+# end of program
