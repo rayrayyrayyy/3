@@ -9,18 +9,18 @@ from termcolor import colored, cprint
 import time
 from colorama import Fore, Back, Style
 
-print_grey = lambda x: cprint(x, 'grey')
-print_yellow = lambda x: cprint(x, 'yellow')
+print_magenta = lambda x: cprint(x, 'magenta')
 
 # intro
-hi_welcome = pyfiglet.figlet_format("Welcome User!", font = "doom", width = 150, justify = "center")
-print(Fore.YELLOW + hi_welcome)
+hi_welcome = pyfiglet.figlet_format('\n' + "Welcome User!", font = "doom", width = 150, justify = "center")
+print_magenta(hi_welcome)
 print(Style.RESET_ALL)
 print(Fore.BLUE + "="*150)
-instruction = "INSTRUCTION: Please enter 20 random integers and if it's even I will find its squared and if it's odd I'll cube it.☺"
+print(Style.RESET_ALL)
+instruction = "INSTRUCTION: Please enter 20 random integers and if it's even I will square it, and if it's odd I'll cube it.☺"
 instruction_center = instruction.center(150)
 print(instruction_center)
-print(Fore.BLUE + "="*150)
+print('\n' + Fore.BLUE + "="*150)
 print(Style.RESET_ALL)
 
 # open file integers.txt(write)
@@ -28,9 +28,9 @@ with open("integers.txt", 'w') as input_file:
 
     # create loop
     i = 0
-    while (i < 20):
+    while (i < 2):
         # ask user for numbers
-        user_numbers = input("\t\tPlease write a number: ")
+        user_numbers = input('\033[1;35m' + "\t\tPlease write a number: \033[0m")
         # put the numbers to integers.txt
         input_file.write((user_numbers) + '\n')
         i += 1
@@ -56,10 +56,10 @@ with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even
             odd_cube.write(str(cubed_number) + '\n')
 
 # outro
-print('\n' + Fore.YELLOW + Style.BRIGHT + "-"*150)
+print('\n' + Fore.BLUE + Style.BRIGHT + "-"*150)
 done = pyfiglet.figlet_format("Thank you!", font = 'doom', width = 150, justify = 'center')
-print_yellow(done)
+print_magenta(done)
 note = "See text files for results"
-print_grey(Fore.YELLOW + '-'*62 + note + '-'*62 + '\n') 
+print(Fore.BLUE + '-'*62 + Style.RESET_ALL + note + Fore.BLUE + '-'*62 + '\n') 
 
 # end of program
