@@ -6,10 +6,10 @@
 # import modules for design
 import pyfiglet
 from termcolor import colored, cprint
+print_magenta = lambda x: cprint(x, 'magenta')
 import time
 from colorama import Fore, Back, Style
 
-print_magenta = lambda x: cprint(x, 'magenta')
 
 # intro
 hi_welcome = pyfiglet.figlet_format('\n' + "Welcome User!", font = "doom", width = 150, justify = "center")
@@ -55,11 +55,17 @@ with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even
             # write cubed number to triple.txt
             odd_cube.write(str(cubed_number) + '\n')
 
+# open files integers.txt(read), double.txt(write), and triple.txt(write)
+with open("integers.txt") as integers_file1, open("double.txt") as even_squared1, open("triple.txt") as odd_cube1:
+    # read integers.txt by line
+    user_num1 = [int(line) for line in integers_file1.read().split()]
+
+
 # outro
 print('\n' + Fore.BLUE + Style.BRIGHT + "-"*150)
 done = pyfiglet.figlet_format("Thank you!", font = 'doom', width = 150, justify = 'center')
 print_magenta(done)
-note = "See text files for results"
-print(Fore.BLUE + '-'*62 + Style.RESET_ALL + note + Fore.BLUE + '-'*62 + '\n') 
+note = "See text files"
+print(Fore.BLUE + '-'*69 + Style.RESET_ALL + note + Fore.BLUE + '-'*69 + '\n') 
 
 # end of program
