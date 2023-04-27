@@ -62,6 +62,11 @@ with open("integers.txt") as integers_file1, open("double.txt") as even_squared1
     # show user the numbers they entered
     print(Fore.LIGHTBLUE_EX + "\033[1m\n\n\tCHOSEN NUMBERS: \033[0m" + Fore.CYAN, user_num1)
 
+    # read double.txt by line
+    num_squared = [int(line) for line in even_squared1.read().split()]
+
+
+
 
 # outro
 print('\n' + Fore.BLUE + Style.BRIGHT + "-"*150)
