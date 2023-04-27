@@ -28,7 +28,7 @@ with open("integers.txt", 'w') as input_file:
 
     # create loop
     i = 0
-    while (i < 2):
+    while (i < 20):
         # ask user for numbers
         user_numbers = input('\033[1;35m' + "\t\tPlease write a number: \033[0m")
         # put the numbers to integers.txt
@@ -55,7 +55,11 @@ with open("integers.txt", 'r') as integers_file, open("double.txt", 'w') as even
             # write cubed number to triple.txt
             odd_cube.write(str(cubed_number) + '\n')
 
+print(input("\nPress enter to continue..."))
+
 print('\n' + Fore.BLUE + "-"*150)
+print('\nLOADING DATA. Please wait...')
+time.sleep(2)
 
 # open files integers.txt(read), double.txt(write), and triple.txt(write)
 with open("integers.txt") as integers_file1, open("double.txt") as even_squared1, open("triple.txt") as odd_cube1:
@@ -63,17 +67,19 @@ with open("integers.txt") as integers_file1, open("double.txt") as even_squared1
     user_num1 = [int(line) for line in integers_file1.read().split()]
     # show user the numbers they entered
     print(Fore.LIGHTBLUE_EX + "\n\n\tCHOSEN NUMBERS: " + Style.RESET_ALL, user_num1)
+    time.sleep(1)
 
     # read double.txt by line
     num_squared = [int(line) for line in even_squared1.read().split()]
     # show user squared even numbers 
     print(Fore.LIGHTBLUE_EX + "\n\n\tSQUARED EVEN NUMBERS: " + Style.RESET_ALL, num_squared)
+    time.sleep(1)
 
     # read triple.txt by line
     num_cubed = [int(line) for line in odd_cube1.read().split()]
     # show user cubed odd numbers
     print(Fore.LIGHTBLUE_EX + "\n\n\tCUBED ODD NUMBERS: " + Style.RESET_ALL, num_cubed)
-
+    time.sleep(3)
 
 # outro
 print('\n' + Fore.BLUE + Style.BRIGHT + "-"*150)
